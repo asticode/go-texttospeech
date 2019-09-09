@@ -1,5 +1,15 @@
 package texttospeech
 
+import (
+	"os/exec"
+)
+
 func (tts textToSpeech) say(i string) error {
-	panic("not available on darwin systems yet")
+
+	command := exec.Command("sh", "-c", "say \""+i+"\"")
+	err := command.Start()
+
+	if err != nil {
+		panic(err)
+	}
 }
