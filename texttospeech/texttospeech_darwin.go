@@ -6,10 +6,11 @@ import (
 
 func (tts textToSpeech) say(i string) error {
 
-	command := exec.Command("sh", "-c", "say \""+i+"\"")
-	err := command.Start()
+	command := exec.Command("say", "\""+i+"\"")
+	stdoutStderr, e := command.CombinedOutput()
 
-	if err != nil {
-		panic(err)
+	// Process error
+	if e != nil {
+		return e
 	}
 }
