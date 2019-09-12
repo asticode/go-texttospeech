@@ -1,6 +1,6 @@
 # Important
 
-`go-texttospeech` is only available for Windows for now. Linux will come next and hopefully MAC OSX too :D
+`go-texttospeech` is only available for Windows and Mac OS X for now. Linux will come next :D
 
 # About
 
@@ -13,7 +13,7 @@
 Run the following command:
 
     $ go get github.com/asticode/go-texttospeech/texttospeech
-    
+
 # Example
 
     // Create text to speech
